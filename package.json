@@ -9,8 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
+    "@geoman-io/leaflet-geoman-free": "^2.13.1",
     "ant-design-vue": "^3.2.15",
     "leaflet": "^1.9.3",
+    "leaflet.markercluster": "^1.5.3",
     "pinia": "^2.0.27",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
