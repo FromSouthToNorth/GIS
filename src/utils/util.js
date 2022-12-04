@@ -16,14 +16,18 @@ export function toFixed(n, fixed) {
  * @param num
  */
 export function segmentationNumber(num) {
-  const newNums = [], strNums = ('' + num).split('').reverse();
+  const strNum = num + '', n = strNum.length;
+  if (n <= 3 || (n % 3 === 0 && n / 3 !== 0)) {
+    return num;
+  }
+  const newNums = [];
   let index = 0;
-  for (const c of strNums) {
+  for (let i = n - 1; i >= 0; i--) {
     if (++index > 3) {
       newNums.push(',');
       index = 0;
     }
-    newNums.push(c);
+    newNums.push(strNum[i]);
   }
   return newNums.reverse().join('');
 }
