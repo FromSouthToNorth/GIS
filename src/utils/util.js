@@ -1,4 +1,4 @@
-/** 会用的一些工具 */
+/** 会用到的一些工具 */
 
 /**
  * 保留 N 位小数
@@ -8,4 +8,22 @@
  */
 export function toFixed(n, fixed) {
   return ~~(Math.pow(10, fixed) * n) / Math.pow(10, fixed);
+}
+
+
+/**
+ * 三位分割数字
+ * @param num
+ */
+export function segmentationNumber(num) {
+  const newNums = [], strNums = ('' + num).split('').reverse();
+  let index = 0;
+  for (const c of strNums) {
+    if (++index > 3) {
+      newNums.push(',');
+      index = 0;
+    }
+    newNums.push(c);
+  }
+  return newNums.reverse().join('');
 }

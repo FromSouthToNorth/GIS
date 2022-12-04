@@ -1,3 +1,4 @@
+import {segmentationNumber} from "./util";
 /** 🌍 leaflet 当中的方法为了不破坏源码方便调用，抄写出来 */
 
 /**
@@ -21,20 +22,3 @@ export function scaleUpdateMetric(map) {
   return pow10 * d >= 10000 ? segmentationNumber(pow10 * d / 1000) + '公里' : segmentationNumber(pow10 * d) + '米';
 }
 
-/**
- * 三位分割数字
- * @param num
- */
-function segmentationNumber(num) {
-  const newNums = [], strNums = ('' + num).split('').reverse();
-  let index = 0;
-  for (const c of strNums) {
-    index++;
-    if (index === 4) {
-      newNums.push(',');
-      index = 0;
-    }
-    newNums.push(c);
-  }
-  return newNums.reverse().join('');
-}
