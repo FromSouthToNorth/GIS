@@ -1,14 +1,17 @@
 <template>
   <div id="map-container"></div>
-  <map-bar :scale="scale" :lat-lng="latLng" />
+  <map-bar :scale="scale" :lat-lng="latLng"/>
 </template>
 
 <script setup>
-import {onMounted, reactive, ref, toRefs} from "vue";
+import {onMounted, ref} from "vue";
 import leafletMapStore from '/@/store/moduels/leafletMap.js'
 import {scaleUpdateMetric} from "/@/utils/mapUtil.js";
 import MapBar from "/@/components/Map/MapBar.vue";
 import {toFixed} from "/@/utils/util.js";
+import markers from "/@/json/marker.json";
+import sichun from "/@/json/state-province/sichun.json";
+import chongqing from "/@/json/state-province/chongqing.json";
 
 const mapStore = leafletMapStore()
 
@@ -44,6 +47,22 @@ function initMap() {
     layers: [baseLayer.value],
   });
 
+  const markerLayerGroup = [];
+
+  for (const marker of markers) {
+    const {placeName, latlng} = marker;
+    const mark = L.marker(latlng, {
+      icon: L.divIcon({
+        className: 'div-icon',
+        iconSize: [26, 18],
+        html: `<div class="div-icon-text">${placeName}</div>`
+      })
+    });
+    markerLayerGroup.push(mark);
+  }
+
+  L.layerGroup(markerLayerGroup).addTo(lMap.value);
+
   latLng.value = latlng;
 
   // 初始化地图比例尺
@@ -61,6 +80,23 @@ function initMap() {
     lng = toFixed(lng, 7);
     latLng.value = {lat, lng};
   });
+
+  L.geoJSON(sichun,{
+    style: {
+      color: '#bae0ff',
+      weight: 0.8,
+      fill: false,
+    }
+  }).addTo(lMap.value);
+  L.geoJSON(chongqing,{
+    style: {
+      color: '#d9f7be',
+      weight: 0.8,
+      fill: false,
+    }
+  }).addTo(lMap.value);
+
+  console.log("leaflet map 加载完成: ", lMap.value)
 
   mapStore.setMap(lMap.value);
 }
