@@ -17,7 +17,7 @@ export function toFixed(n, fixed) {
  */
 export function segmentationNumber(num) {
   const strNum = num + '', n = strNum.length;
-  if (n <= 3 || (n % 3 === 0 && n / 3 !== 0)) {
+  if (n <= 3) {
     return num;
   }
   const newNums = [];
