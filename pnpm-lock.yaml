@@ -7,6 +7,9 @@ specifiers:
   ant-design-vue: ^3.2.15
   eslint: ^8.29.0
   leaflet: ^1.9.3
+  leaflet-contextmenu: ^1.4.0
+  leaflet-heatmap: ^1.0.0
+  leaflet-rotate: ^0.1.4
   leaflet.markercluster: ^1.5.3
   less: ^4.1.3
   pinia: ^2.0.27
@@ -19,6 +22,9 @@ dependencies:
   '@geoman-io/leaflet-geoman-free': 2.13.1_leaflet@1.9.3
   ant-design-vue: 3.2.15_vue@3.2.45
   leaflet: 1.9.3
+  leaflet-contextmenu: registry.npmmirror.com/leaflet-contextmenu/1.4.0
+  leaflet-heatmap: registry.npmmirror.com/leaflet-heatmap/1.0.0
+  leaflet-rotate: registry.npmmirror.com/leaflet-rotate/0.1.4_leaflet@1.9.3
   leaflet.markercluster: 1.5.3_leaflet@1.9.3
   pinia: 2.0.27_vue@3.2.45
   vue: 3.2.45
