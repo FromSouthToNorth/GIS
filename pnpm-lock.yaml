@@ -22,9 +22,9 @@ dependencies:
   '@geoman-io/leaflet-geoman-free': 2.13.1_leaflet@1.9.3
   ant-design-vue: 3.2.15_vue@3.2.45
   leaflet: 1.9.3
-  leaflet-contextmenu: registry.npmmirror.com/leaflet-contextmenu/1.4.0
-  leaflet-heatmap: registry.npmmirror.com/leaflet-heatmap/1.0.0
-  leaflet-rotate: registry.npmmirror.com/leaflet-rotate/0.1.4_leaflet@1.9.3
+  leaflet-contextmenu: 1.4.0
+  leaflet-heatmap: 1.0.0
+  leaflet-rotate: 0.1.4_leaflet@1.9.3
   leaflet.markercluster: 1.5.3_leaflet@1.9.3
   pinia: 2.0.27_vue@3.2.45
   vue: 3.2.45
@@ -1071,6 +1071,10 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /heatmap.js/2.0.5:
+    resolution: {integrity: sha512-CG2gYFP5Cv9IQCXEg3ZRxnJDyAilhWnQlAuHYGuWVzv6mFtQelS1bR9iN80IyDmFECbFPbg6I0LR5uAFHgCthw==}
+    dev: false
+
   /iconv-lite/0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
@@ -1174,6 +1178,25 @@ packages:
   /json-stable-stringify-without-jsonify/1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
     dev: true
+
+  /leaflet-contextmenu/1.4.0:
+    resolution: {integrity: sha512-BXASCmJ5bLkuJGDCpWmvGqhZi5AzeOY0IbQalfkgBcMAMfAOFSvD4y0gIQxF/XzEyLkjXaRiUpibVj4+Cf3tUA==}
+    dev: false
+
+  /leaflet-heatmap/1.0.0:
+    resolution: {integrity: sha512-WP/emZYwjWaEnWMcE2dftuJvtjp53zmJcHtVTHUqPN7AQEowHxDTLH5j1BJjE4uL1K5dJclBLX4oLpnOGS/qTw==}
+    dependencies:
+      heatmap.js: 2.0.5
+      leaflet: 1.9.3
+    dev: false
+
+  /leaflet-rotate/0.1.4_leaflet@1.9.3:
+    resolution: {integrity: sha512-z00sucHpicQkON6NPUMjAflLHrodBOQ8zapgTnBvoey9kEnGX1+9WYbWmR9cPaTDnMyjxTzPeVJZEiUaH/RX3Q==}
+    peerDependencies:
+      leaflet: ^1.7.0
+    dependencies:
+      leaflet: 1.9.3
+    dev: false
 
   /leaflet.markercluster/1.5.3_leaflet@1.9.3:
     resolution: {integrity: sha512-vPTw/Bndq7eQHjLBVlWpnGeLa3t+3zGiuM7fJwCkiMFq+nmRuG3RI3f7f4N4TDX7T4NpbAXpR2+NTRSEGfCSeA==}
