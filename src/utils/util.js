@@ -7,7 +7,11 @@
  * @returns {number}
  */
 export function toFixed(n, fixed) {
-  return ~~(Math.pow(10, fixed) * n) / Math.pow(10, fixed);
+  if (!fixed) {
+    fixed = 7;
+  }
+  const re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed) + '})?');
+  return parseFloat(n.toString().match(re)[0]);
 }
 
 
