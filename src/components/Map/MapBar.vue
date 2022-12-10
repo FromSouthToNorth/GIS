@@ -1,5 +1,8 @@
 <template>
   <div class="map-bar">
+    <div class="svg-item">
+      <svg-icon :icon-class="'ruler'" :size="18 " />
+    </div>
     <div class="map-scale">
       <div class="scale-bar">
         <div class="scale-text">
@@ -17,9 +20,11 @@
 <script>
 import {computed, defineComponent} from "vue";
 import {LoadingOutlined} from "@ant-design/icons-vue";
+import SvgIcon from "/@/components/SvgIcon/index.vue";
 
 export default defineComponent({
   components: {
+    SvgIcon,
     LoadingOutlined
   },
   props: {
@@ -35,12 +40,6 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const scale = computed(() => {
-      return props.scale ? props.scale : ''
-    })
-    const latLng = computed(() => {
-      return props.latLng ? props.latLng : null
-    })
   }
 })
 

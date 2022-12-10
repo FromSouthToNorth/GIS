@@ -6,6 +6,7 @@ const leafletMapStore = defineStore(
   {
     state: () => ({
       lMap: null,
+      markerClusterGroup: null,
     }),
 
     actions: {
@@ -18,6 +19,16 @@ const leafletMapStore = defineStore(
       getMap() {
         return this.lMap;
       },
+
+      /** 设置标记聚合的分组 */
+      setMarkerClusterGroup(markerClusterGroup) {
+        this.markerClusterGroup = markerClusterGroup;
+      },
+
+      /** 获取标记聚合的分组 */
+      getMarkerClusterGroup() {
+        return this.markerClusterGroup;
+      }
     }
   }
 )
