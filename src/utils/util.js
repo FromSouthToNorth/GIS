@@ -2,16 +2,16 @@
 
 /**
  * 保留 N 位小数
- * @param n 输入的小数
+ * @param num 输入的小数
  * @param fixed 保留的位数
  * @returns {number}
  */
-export function toFixed(n, fixed) {
+export function toFixed(num, fixed) {
   if (!fixed) {
     fixed = 7;
   }
-  const re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed) + '})?');
-  return parseFloat(n.toString().match(re)[0]);
+  const res = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed) + '})?');
+  return parseFloat(num.toString().match(res)[0]);
 }
 
 
