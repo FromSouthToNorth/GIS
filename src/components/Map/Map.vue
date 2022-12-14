@@ -18,7 +18,7 @@ const mapStore = leafletMapStore()
 let lMap = reactive({});
 const baseLayer = reactive({});
 const scale = ref('');
-const latLng = ref({});
+const latLng = reactive({});
 let markerClusterGroup = reactive({});
 
 onMounted(() => {
@@ -114,7 +114,7 @@ function initMap() {
         iconSize: [68, 16],
         html: `<div class="div-icon-text3">${name}</div>`
       })
-    });
+    }).bindPopup(name);
     marker.on('click', e => {
       const {target} = e;
       console.log(e);
@@ -145,7 +145,7 @@ function initMap() {
 
   console.log("leaflet map 加载完成: ", lMap)
 
-  mapStore.setMap(lMap);
+  mapStore.setMap(lMap.value);
 }
 </script>
 

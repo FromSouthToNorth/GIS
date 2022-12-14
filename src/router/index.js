@@ -4,6 +4,10 @@ export const constantRoutes = [
   {
     path: '/',
     component: () => import('../views/index.vue')
+  },
+  {
+    path: '/animation',
+      component: () => import('../views/animation.vue')
   }
 ]
 

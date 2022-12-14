@@ -6,7 +6,10 @@ specifiers:
   '@purge-icons/generated': ^0.9.0
   '@vitejs/plugin-vue': ^3.2.0
   ant-design-vue: ^3.2.15
+  dynamics: ^1.0.0
+  dynamics.js: ^1.1.5
   eslint: ^8.29.0
+  gsap: ^3.11.3
   leaflet: ^1.9.3
   leaflet-contextmenu: ^1.4.0
   leaflet-geometryutil: ^0.10.1
@@ -26,6 +29,9 @@ dependencies:
   '@ant-design/icons-vue': 6.1.0_vue@3.2.45
   '@geoman-io/leaflet-geoman-free': 2.13.1_leaflet@1.9.3
   ant-design-vue: 3.2.15_vue@3.2.45
+  dynamics: 1.0.0
+  dynamics.js: 1.1.5
+  gsap: 3.11.3
   leaflet: 1.9.3
   leaflet-contextmenu: 1.4.0
   leaflet-geometryutil: 0.10.1
@@ -975,6 +981,14 @@ packages:
       domhandler: 4.3.1
     dev: true
 
+  /dynamics.js/1.1.5:
+    resolution: {integrity: sha512-c+LHNccaJS67T4Jfk9b/5CwYsZCHmc10+MplWB8WPFyqTMEqOf8MI56Rg0JRILWjtXnjuBO7xmrNevNnPX+NHg==}
+    dev: false
+
+  /dynamics/1.0.0:
+    resolution: {integrity: sha512-DyZJpJVdHCqBdczb06IRu7zAKbCyjhlzMB3IsLBm8ZtWjOYdU3R3An7bFFUSem/g6mNXkSZiXaZiOMMTFXrdVw==}
+    dev: false
+
   /emojis-list/3.0.0:
     resolution: {integrity: sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==}
     engines: {node: '>= 4'}
@@ -1558,6 +1572,10 @@ packages:
   /grapheme-splitter/1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
+
+  /gsap/3.11.3:
+    resolution: {integrity: sha512-xc/iIJy+LWiMbRa4IdMtdnnKa/7PXEK6NNzV71gdOYUVeTZN7UWnLU0fB7Hi1iwiz4ZZoYkBZPPYGg+2+zzFHA==}
+    dev: false
 
   /has-ansi/2.0.0:
     resolution: {integrity: sha512-C8vBJ8DwUCx19vhm7urhTuUsr4/IyP6l4VzNQDv+ryHQObW3TTTp9yB68WpYgRe2bbaGuZ/se74IqFeVnMnLZg==}

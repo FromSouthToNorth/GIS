@@ -4,7 +4,6 @@ import createCompression from "./compression.js";
 
 export default function createVitePlugins(viteEnv, isBuild = false) {
   const vitePlugins = [vue()]
-  console.log("createSvgIcon: ", createSvgIcon(isBuild));
   vitePlugins.push(createSvgIcon(isBuild))
   isBuild && vitePlugins.push(...createCompression(viteEnv))
   return vitePlugins
