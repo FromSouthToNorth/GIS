@@ -1,7 +1,7 @@
 <template>
   <div class="map-bar">
     <div class="svg-item">
-      <svg-icon :icon-class="'ruler'" :size="18 " />
+      <svg-icon :icon-class="'ruler'" :size="18 "/>
     </div>
     <div class="map-scale">
       <div class="scale-bar">
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {computed, defineComponent} from "vue";
+import {computed, defineComponent, watch} from "vue";
 import {LoadingOutlined} from "@ant-design/icons-vue";
 import SvgIcon from "/@/components/SvgIcon/index.vue";
 

@@ -18,7 +18,7 @@ const mapStore = leafletMapStore()
 let lMap = reactive({});
 const baseLayer = reactive({});
 const scale = ref('');
-const latLng = reactive({});
+const latLng = ref({});
 let markerClusterGroup = reactive({});
 
 onMounted(() => {
