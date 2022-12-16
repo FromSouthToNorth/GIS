@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "amenity_polygons",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "osm_id": 478281345, "amenity": "bus_station", "building": "yes", "name": "邻水县汽车站" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 106.9211742, 30.3243546 ], [ 106.9223677, 30.3239891 ], [ 106.9227238, 30.3250525 ], [ 106.9216939, 30.3253599 ], [ 106.9216169, 30.3250359 ], [ 106.9213378, 30.3250525 ], [ 106.9211742, 30.3243546 ] ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 478281343, "amenity": "school", "building": null, "name": "邻水县中学" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 106.925567, 30.3288074 ], [ 106.9258005, 30.3285336 ], [ 106.9295044, 30.3280083 ], [ 106.9296334, 30.3288276 ], [ 106.9291415, 30.328937 ], [ 106.9289938, 30.3297942 ], [ 106.9266259, 30.3304395 ], [ 106.925567, 30.3288074 ] ] ] } }
+]
+}

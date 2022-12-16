@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "tunnels",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "osm_id": 538400061, "layer": "-1", "ref": "304", "highway": "secondary", "name": "大佛寺东路", "tunnel": "yes", "oneway": null, "tunnel:name": null, "name:en": null, "lanes": null, "tunnel:name:en": null }, "geometry": { "type": "LineString", "coordinates": [ [ 106.9222178, 30.3009458 ], [ 106.9212172, 30.3017168 ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 538403165, "layer": "-1", "ref": null, "highway": "tertiary", "name": null, "tunnel": "yes", "oneway": null, "tunnel:name": null, "name:en": null, "lanes": null, "tunnel:name:en": null }, "geometry": { "type": "LineString", "coordinates": [ [ 106.9362291, 30.313589 ], [ 106.9368861, 30.3133241 ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 956047576, "layer": "-1", "ref": "G42", "highway": "motorway", "name": "沪蓉高速", "tunnel": "yes", "oneway": "yes", "tunnel:name": "铜锣山隧道", "name:en": "Hurong Expressway", "lanes": "2", "tunnel:name:en": "Tongluoshan Tunnel" }, "geometry": { "type": "LineString", "coordinates": [ [ 106.9619256, 30.2932872 ], [ 107.0006537, 30.2604017 ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 956047577, "layer": "-1", "ref": "G42", "highway": "motorway", "name": "沪蓉高速", "tunnel": "yes", "oneway": "yes", "tunnel:name": "铜锣山隧道", "name:en": "Hurong Expressway", "lanes": "2", "tunnel:name:en": "Tongluoshan Tunnel" }, "geometry": { "type": "LineString", "coordinates": [ [ 107.0009564, 30.2606244 ], [ 106.9622196, 30.2934988 ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 956051090, "layer": "-1", "ref": null, "highway": "trunk", "name": null, "tunnel": "yes", "oneway": "yes", "tunnel:name": null, "name:en": null, "lanes": null, "tunnel:name:en": null }, "geometry": { "type": "LineString", "coordinates": [ [ 106.9080256, 30.3386202 ], [ 106.9078481, 30.3380156 ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 956051091, "layer": "-1", "ref": null, "highway": "trunk", "name": null, "tunnel": "yes", "oneway": "yes", "tunnel:name": null, "name:en": null, "lanes": null, "tunnel:name:en": null }, "geometry": { "type": "LineString", "coordinates": [ [ 106.907959, 30.3379911 ], [ 106.9081386, 30.3386028 ] ] } }
+]
+}
