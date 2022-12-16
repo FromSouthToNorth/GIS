@@ -4,6 +4,7 @@ import App from './App.vue';
 import 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-contextmenu';
+import 'leaflet-contextmenu/dist/leaflet.contextmenu.min.css'
 import 'leaflet-heatmap';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
@@ -16,6 +17,7 @@ import 'leaflet-geometryutil/src/leaflet.geometryutil'
 import Ant from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import './assets/less/index.less';
+
 import router from "/@/router/index.js";
 import store from "/@/store/index.js";
 

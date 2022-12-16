@@ -1,0 +1,697 @@
+[
+  {
+    "type": "Marker",
+    "name": "点",
+    "childMenus": [
+      {
+        "name": "自然",
+        "type": "nature",
+        "childMenus": [
+          {
+            "name": "自然树林",
+            "field": [
+              {
+                "name": "name",
+                "label": "名称",
+                "type": "text"
+              },
+              {
+                "name": "leafShape",
+                "label": "叶型",
+                "type": "text",
+                "placeholder": "阔叶，针叶"
+              },
+              {
+                "name": "leafCycle",
+                "label": "落叶周期",
+                "type": "text",
+                "placeholder": "常绿，落叶，半常绿"
+              }
+            ]
+          },
+          {
+            "name": "湿地",
+            "field": [
+              {
+                "name": "type",
+                "label": "类型",
+                "type": "text",
+                "placeholder": "本木沼泽，草本沼泽，芦苇荡"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "公园",
+        "type": "garden",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "name": "openingHours",
+            "label": "开放时间",
+            "type": "date"
+          }
+        ]
+      },
+      {
+        "name": "医院",
+        "type": "hospital",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "specialist",
+            "label": "专科",
+            "type": "tags"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "餐厅",
+        "type": "diningRoom",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "超市",
+        "type": "supermarket",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "银行",
+        "type": "bank",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "居民小区",
+        "type": "residentialArea",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Line",
+    "name": "线",
+    "childMenus": [
+      {
+        "name": "主要道路",
+        "type": "mainRoad",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "oneWay",
+            "label": "单行道",
+            "type": "radio"
+          },
+          {
+            "name": "direction",
+            "label": "方向",
+            "type": "button "
+          },
+          {
+            "name": "speedLimit",
+            "label": "限制速度",
+            "type": "number"
+          },
+          {
+            "name": "numberOfLanes",
+            "label": "车道数量",
+            "type": "number"
+          },
+          {
+            "name": "surfaceLaying",
+            "label": "表面铺设",
+            "type": "text"
+          },
+          {
+            "name": "structure",
+            "label": "结构",
+            "type": "radio"
+          },
+          {
+            "name": "allowedToPass",
+            "label": "允许通行",
+            "type": "checkbox"
+          }
+        ]
+      },
+      {
+        "name": "河流",
+        "type": "river",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "width",
+            "label": "宽度",
+            "type": "number"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Polygon ",
+    "name": "区域",
+    "childMenus": [
+      {
+        "name": "自然",
+        "type": "nature",
+        "childMenus": [
+          {
+            "name": "自然树林",
+            "field": [
+              {
+                "name": "name",
+                "label": "名称",
+                "type": "text"
+              },
+              {
+                "name": "leafShape",
+                "label": "叶型",
+                "type": "text",
+                "placeholder": "阔叶，针叶"
+              },
+              {
+                "name": "leafCycle",
+                "label": "落叶周期",
+                "type": "text",
+                "placeholder": "常绿，落叶，半常绿"
+              }
+            ]
+          },
+          {
+            "name": "湿地",
+            "field": [
+              {
+                "name": "type",
+                "label": "类型",
+                "type": "text",
+                "placeholder": "本木沼泽，草本沼泽，芦苇荡"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "公园",
+        "type": "garden",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "name": "openingHours",
+            "label": "开放时间",
+            "type": "date"
+          }
+        ]
+      },
+      {
+        "name": "医院",
+        "type": "hospital",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "specialist",
+            "label": "专科",
+            "type": "tags"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "餐厅",
+        "type": "diningRoom",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "超市",
+        "type": "supermarket",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "银行",
+        "type": "bank",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "居民小区",
+        "type": "residentialArea",
+        "field": [
+          {
+            "name": "name",
+            "label": "名称",
+            "type": "text"
+          },
+          {
+            "name": "address",
+            "label": "地址",
+            "type": "mix",
+            "mix": [
+              {
+                "name": "zipCode",
+                "placeholder": "邮政编码",
+                "type": "number"
+              },
+              {
+                "name": "province",
+                "placeholder": "省/自治区/直辖市/特别行政区",
+                "type": "text"
+              },
+              {
+                "name": "city",
+                "placeholder": "地级市/地区",
+                "type": "text"
+              },
+              {
+                "name": "county",
+                "placeholder": "县/村",
+                "type": "text"
+              },
+              {
+                "name": "road",
+                "placeholder": "路",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+

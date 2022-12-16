@@ -1,8 +1,8 @@
 <template>
   <div class="map-bar">
-    <div class="svg-item">
-      <svg-icon :icon-class="'ruler'" :size="18 "/>
-    </div>
+<!--    <div class="svg-item">-->
+<!--      <svg-icon @click="$emit('measurement')" :icon-class="'ruler'" :size="18 "/>-->
+<!--    </div>-->
     <div class="map-scale">
       <div class="scale-bar">
         <div class="scale-text">
@@ -17,33 +17,40 @@
   </div>
 </template>
 
-<script>
-import {computed, defineComponent, watch} from "vue";
-import {LoadingOutlined} from "@ant-design/icons-vue";
+<script setup>
+import {reactive, watch} from "vue";
 import SvgIcon from "/@/components/SvgIcon/index.vue";
+import gsap from "gsap";
 
-export default defineComponent({
-  components: {
-    SvgIcon,
-    LoadingOutlined
+const props = defineProps({
+  scale: {
+    type: String
   },
-  props: {
-    scale: {
-      type: String
-    },
-    latLng: {
-      type: Object,
-      default: {
-        lat: 0,
-        lng: 0,
-      }
-    },
+  lat: {
+    type: [Number, String]
   },
-  setup(props) {
+  lng: {
+    type: [Number, String]
   }
 })
 
+const latLng = reactive({
+  lat: 0,
+  lng: 0
+})
 
+function AnimateToValue() {
+  gsap.to(latLng, {
+    duration: 0.6,
+    lat: props.lat,
+    lng: props.lng
+  })
+}
+
+AnimateToValue();
+
+watch(() => props.lat, () => AnimateToValue())
+watch(() => props.lng, () => AnimateToValue())
 </script>
 
 <style scoped>
