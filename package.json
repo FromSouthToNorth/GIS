@@ -21,6 +21,7 @@
     "leaflet-rotate": "^0.1.4",
     "leaflet.markercluster": "^1.5.3",
     "pinia": "^2.0.27",
+    "vditor": "^3.8.18",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
   },

@@ -1,0 +1,165 @@
+{
+  "type": "FeatureCollection",
+  "name": "amenity_points",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 7212305089,
+        "barrier": "toll_booth",
+        "amenity": null,
+        "name": null,
+        "natural": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9087834,
+          30.3108665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 8848351473,
+        "barrier": null,
+        "amenity": "fuel",
+        "name": null,
+        "natural": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9138384,
+          30.3166777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 8643436572,
+        "barrier": "toll_booth",
+        "amenity": null,
+        "name": null,
+        "natural": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9057082,
+          30.3388083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 8643436573,
+        "barrier": "toll_booth",
+        "amenity": null,
+        "name": null,
+        "natural": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9057367,
+          30.3389539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 8643439985,
+        "barrier": "toll_booth",
+        "amenity": null,
+        "name": null,
+        "natural": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9206403,
+          30.3233312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 5241145960,
+        "barrier": "toll_booth",
+        "amenity": null,
+        "name": null,
+        "natural": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9207281,
+          30.3233284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 5241145987,
+        "barrier": null,
+        "amenity": "school",
+        "name": "四川省邻水实验学校",
+        "natural": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9268861,
+          30.3270003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 5241217582,
+        "barrier": null,
+        "amenity": null,
+        "name": "银鼎山",
+        "natural": "peak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9255757,
+          30.3386815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": 4715151256,
+        "barrier": null,
+        "amenity": "townhall",
+        "name": "邻水县政府",
+        "natural": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.9264504,
+          30.3375113
+        ]
+      }
+    }
+  ]
+}

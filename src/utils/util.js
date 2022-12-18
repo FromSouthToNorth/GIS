@@ -14,7 +14,6 @@ export function toFixed(num, fixed) {
   return parseFloat(num.toString().match(res)[0]);
 }
 
-
 /**
  * 三位分割数字
  * @param num
@@ -34,4 +33,15 @@ export function segmentationNumber(num) {
     newNums.push(strNum[i]);
   }
   return newNums.reverse().join('');
+}
+
+export const withInstall = (component, alias) => {
+  const comp = component;
+  comp.install = (app) => {
+    app.component(comp.name || comp.displayName, component);
+    if (alias) {
+      app.config.globalProperties[alias] = component;
+    }
+  };
+  return component;
 }

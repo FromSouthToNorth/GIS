@@ -1,21 +1,24 @@
 <template>
-  <div id="map-container"></div>
+  <div id="map-container" ref="mapRef"></div>
   <map-bar :lat="lat" :lng="lng" :scale="scale" @measurement="measurement"/>
   <drawer-form :type="drawerType" :visible="visible" @on-close="onClose" />
 </template>
 
 <script setup>
-import {onMounted, ref, reactive} from "vue";
+import {onMounted, ref, reactive, onBeforeUnmount, unref, onDeactivated} from "vue";
 import leafletMapStore from '/@/store/moduels/leafletMap.js'
 import {scaleUpdateMetric} from "/@/utils/mapUtil.js";
-import MapBar from "/@/components/Map/MapBar.vue";
+import MapBar from "/@/components/Map/src/MapBar.vue";
 import {toFixed} from "/@/utils/util.js";
 import sichun from "/@/json/state-province/sichun.json";
 import chongqing from "/@/json/state-province/chongqing.json";
 import china from "/@/json/china.json";
-import DrawerForm from "/@/components/Map/DrawerForm.vue";
+import DrawerForm from "/@/components/Map/src/DrawerForm.vue";
+import {onMountedOrActivated} from "/@/hooks/core/onMountedOrActivated.js";
 
 const mapStore = leafletMapStore()
+
+const mapRef = ref(null);
 
 const visible = ref(false);
 const drawerType = ref('');
@@ -27,19 +30,18 @@ const lng = ref(108.5525);
 let markerClusterGroup = reactive({});
 const drawLayerGroup = ref([])
 
-onMounted(() => {
-  initMap();
-})
-
 /** 初始化 leaflet map */
 function initMap() {
+  const mapEl = unref(mapRef);
+  if (!mapEl) return;
+
   baseLayer.value = L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{style_id}/tiles/{z}/{x}/{y}{r}?access_token={token}', {
     username: 'mapbox',
     style_id: 'streets-v12',
     token: 'pk.eyJ1IjoiaHlzZSIsImEiOiJja3c0ZDNxdTIwNHk1MnBtem5yZ2s4MDJmIn0.Bc8fEfsCPoB_ihTfnQ6zbg',
   });
 
-  lMap = L.map('map-container', {
+  const insMap = L.map(mapEl, {
     center: [lat.value, lng.value], // 北纬34°32′27.00″，东经108°55′25.00″
     zoom: 6,
     minZoom: 4,
@@ -51,24 +53,24 @@ function initMap() {
     layers: [baseLayer.value],
   });
 
-  lMap.pm.setLang('zh');
+  insMap.pm.setLang('zh');
 
   // 初始化地图比例尺
-  scale.value = scaleUpdateMetric(lMap);
+  scale.value = scaleUpdateMetric(insMap);
 
   // 监听地图缩放层级变化 [获取比例规格]
-  lMap.on('zoom', e => {
-    scale.value = scaleUpdateMetric(lMap);
+  insMap.on('zoom', e => {
+    scale.value = scaleUpdateMetric(insMap);
   });
 
   // 监听地图🖱️鼠标移动事件 [获取鼠标所在地图的经纬度]
-  lMap.on('mousemove', e => {
+  insMap.on('mousemove', e => {
     // let {lat, lng} =
     lat.value = toFixed(e.latlng.lat, 7);
     lng.value = toFixed(e.latlng.lng, 7);
   });
 
-  lMap.on('pm:create', e => {
+  insMap.on('pm:create', e => {
     console.log(e);
     const {shape, layer} = e;
     console.log(shape, layer);
@@ -87,10 +89,10 @@ function initMap() {
     console.log(drawLayerGroup.value);
     drawerType.value = shape;
     visible.value = true;
-    lMap.pm.disableDraw();
+    insMap.pm.disableDraw();
   });
 
-  lMap.pm.addControls({
+  insMap.pm.addControls({
     positions: 'topleft'
   })
 
@@ -169,9 +171,9 @@ function initMap() {
   // markerClusterGroup.addLayers(markerClusterGroups)
   // lMap.addLayer(markerClusterGroup);
 
-  console.log("leaflet map 加载完成: ", lMap)
-
-  mapStore.setMap(lMap.value);
+  console.log("leaflet map 加载完成: ", insMap)
+  mapStore.setMap(insMap);
+  lMap = insMap;
 }
 
 function measurement() {
@@ -182,9 +184,23 @@ function measurement() {
   });
 }
 function onClose() {
-  console.log("onClose");
   visible.value = false;
 }
+
+function destroy() {
+  const mapInstance = unref(mapRef);
+  if(!mapInstance) return;
+  try {
+    mapInstance.destroy();
+  }
+  catch (error) {}
+  lMap = null;
+}
+
+onMountedOrActivated(initMap);
+
+onBeforeUnmount(destroy);
+onDeactivated(destroy);
 </script>
 
 <style scoped>

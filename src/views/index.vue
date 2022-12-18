@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import Map from "/@/components/Map/Map.vue";
+import {Map} from "/@/components/Map";
 </script>
 
 <style scoped>

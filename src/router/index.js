@@ -7,7 +7,11 @@ export const constantRoutes = [
   },
   {
     path: '/animation',
-      component: () => import('../views/animation.vue')
+    component: () => import('../views/animation.vue')
+  },
+  {
+    path: '/markdown',
+    component: () => import('../views/markdown.vue')
   }
 ]
 
@@ -17,8 +21,7 @@ const router = createRouter({
   scrollBehavior(tpo, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
-    }
-    else {
+    } else {
       return {
         top: 0,
       }

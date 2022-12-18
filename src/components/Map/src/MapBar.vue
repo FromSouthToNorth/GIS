@@ -21,6 +21,8 @@
 import {reactive, watch} from "vue";
 import SvgIcon from "/@/components/SvgIcon/index.vue";
 import gsap from "gsap";
+import leafletMapStore from "/@/store/moduels/leafletMap.js";
+const mapStore = leafletMapStore();
 
 const props = defineProps({
   scale: {
@@ -49,8 +51,11 @@ function AnimateToValue() {
 
 AnimateToValue();
 
-watch(() => props.lat, () => AnimateToValue())
-watch(() => props.lng, () => AnimateToValue())
+watch(() => props.lat, () => AnimateToValue());
+watch(() => props.lng, () => AnimateToValue());
+// watch(() => mapStore.getMap() => () => {
+//
+// })
 </script>
 
 <style scoped>
