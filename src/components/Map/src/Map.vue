@@ -41,6 +41,21 @@ function initMap() {
     token: 'pk.eyJ1IjoiaHlzZSIsImEiOiJja3c0ZDNxdTIwNHk1MnBtem5yZ2s4MDJmIn0.Bc8fEfsCPoB_ihTfnQ6zbg',
   });
 
+  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+  });
+
+  const gode = L.tileLayer('http://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
+    subdomains: "1234"
+  })
+
+  const baseMaps = {
+    "OpenStreetMap": osm,
+    "Mapbox Streets": baseLayer.value,
+    "gaoDe": gode
+  }
+
   const insMap = L.map(mapEl, {
     center: [lat.value, lng.value], // 北纬34°32′27.00″，东经108°55′25.00″
     zoom: 6,
@@ -52,6 +67,8 @@ function initMap() {
     zoomControl: false,
     layers: [baseLayer.value],
   });
+
+  const layerControl = L.control.layers(baseMaps).addTo(insMap);
 
   insMap.pm.setLang('zh');
 

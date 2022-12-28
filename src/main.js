@@ -16,7 +16,7 @@ import 'leaflet-geometryutil/src/leaflet.geometryutil'
 
 import Ant from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
-import './assets/less/index.less';
+import './design/index.less';
 
 import router from "/@/router/index.js";
 import store from "/@/store/index.js";

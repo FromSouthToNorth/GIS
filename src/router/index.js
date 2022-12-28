@@ -12,6 +12,10 @@ export const constantRoutes = [
   {
     path: '/markdown',
     component: () => import('../views/markdown.vue')
+  },
+  {
+    path: '/icons',
+    component: () => import('../views/icons.vue')
   }
 ]
 
